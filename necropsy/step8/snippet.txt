@@ -1,0 +1,14 @@
+<model-viewer src="8_pozisyon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <button class="Hotspot" slot="hotspot-1" data-surface="19 0 2118 21589 21534 0.452 0.100 0.447" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Removing skin covering the skull </div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

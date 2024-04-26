@@ -1,0 +1,14 @@
+<model-viewer src="3_pozisyon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" min-camera-orbit="-180deg 0deg auto" max-camera-orbit="180deg 90deg auto">
+    <button class="Hotspot" slot="hotspot-1" data-surface="18 0 3073 27415 3054 0.820 0.008 0.172" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Examining the abdominal viscera. </div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

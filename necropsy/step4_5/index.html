@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Virtual Necropsy</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+	<script>
+      setTimeout(() => {
+      const box = document.getElementById('yok');
+    
+      // 👇️ removes element from DOM
+      box.style.visibility = 'hidden';
+      // 👇️ hides element (still takes up space on page)
+      // box.style.visibility = 'hidden';
+    }, 7000); // 👈️ time in milliseconds
+    </script>
+	<style>
+  
+  .flex-parent {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+button.margin-right {
+  margin-right: 100px;
+  
+}
+.button {
+  background-color: #498ade;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="4_5_pozisyon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" min-camera-orbit="-180deg 0deg auto" max-camera-orbit="180deg 90deg auto">
+      <button class="Hotspot" slot="hotspot-1" data-surface="20 0 5347 10287 13256 0.185 0.057 0.758" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Stomach
+          </div>
+      </button><button class="Hotspot" slot="hotspot-2" data-surface="20 0 5380 13232 5395 0.654 0.090 0.256" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Liver</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-surface="20 0 1982 1967 1966 0.078 0.820 0.101" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Intestines</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-surface="20 0 2760 2765 2763 0.250 0.129 0.621" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Rectum &amp; anus</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-surface="19 0 24566 24586 15508 0.212 0.552 0.236" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Kidney (left)</div>
+      </button><button class="Hotspot" slot="hotspot-6" data-surface="19 0 22449 22728 22722 0.242 0.348 0.410" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Uterus</div>
+      </button><button class="Hotspot" slot="hotspot-7" data-surface="19 0 20454 20457 20450 0.421 0.566 0.014" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Urinary bladder</div>
+      </button><button class="Hotspot" slot="hotspot-8" data-surface="19 0 12926 14204 12946 0.663 0.099 0.238" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Diaphragm </div>
+      </button><button class="Hotspot" slot="hotspot-9" data-surface="19 0 16842 16909 16841 0.017 0.870 0.113" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Thoracic cavity
+          </div>
+      </button>
+	        <div id="my-ar-container"> <p id="yok" style="text-align:center; right: 0px; left: 0px; margin: 70 auto; " > <img src="../4_5_pozisyon-logo.png" width="280" height="130"></p></div>
+
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+	<div class="flex-parent jc-center">
+    <button class="button margin-right " onclick="location.href='../step3/index.html'" type="button">
+         Prev. Step</button>
+		 <button class="button" onclick="location.href='../step6/index.html'" type="button">
+         Next Step</button>
+    </div>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </body>
+</html>

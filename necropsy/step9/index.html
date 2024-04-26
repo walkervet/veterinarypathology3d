@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Virtual Necropsy</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+	<script>
+      setTimeout(() => {
+      const box = document.getElementById('yok');
+    
+      // 👇️ removes element from DOM
+      box.style.visibility = 'hidden';
+      // 👇️ hides element (still takes up space on page)
+      // box.style.visibility = 'hidden';
+    }, 7000); // 👈️ time in milliseconds
+    </script>
+	<style>
+  
+  .flex-parent {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+button.margin-right {
+  margin-right: 100px;
+  
+}
+.button {
+  background-color: #498ade;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="9_pozisyon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" min-camera-orbit="-180deg 0deg auto" max-camera-orbit="180deg 90deg auto">
+      <button class="Hotspot" slot="hotspot-1" data-surface="19 0 9061 8985 9058 0.105 0.409 0.486" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Removing the calvarium to demonstrate brain</div>
+      </button>
+	        <div id="my-ar-container"> <p id="yok" style="text-align:center; right: 0px; left: 0px; margin: 70 auto; " > <img src="../9_pozisyon-logo.png" width="280" height="130"></p></div>
+
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+	<div class="flex-parent jc-center">
+    <button class="button margin-right " onclick="location.href='../step8/index.html'" type="button">
+         Prev. Step</button>
+		 <button class="button" onclick="location.href='../step10/index.html'" type="button">
+         Next Step</button>
+    </div>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </body>
+</html>
